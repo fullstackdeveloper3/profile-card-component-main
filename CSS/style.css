@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: hsl(185, 75%, 39%);
+    height: 100vh;
+    overflow: hidden;
+}
+/* Mobile First */
+.up {
+    position: absolute;
+    top: -435px;
+    transform: rotate(29deg);
+}
+.down {
+    position: absolute;
+    right: -205px;
+    z-index: -1;
+    bottom: -467px;
+}
+.profile {
+    overflow: hidden;
+}
+.container {
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+@media (min-width: 768px){
+    .container {
+        width: 70%;
+    }
+
+}
+@media (min-width: 992px) {
+    .container {
+        width: 20%;
+    }
+}
+.container img:first-of-type {
+    width: 100%;
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.container img:last-of-type {
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    border: 5px solid white;
+    top: 50%;
+    transform: translate(-50%, -94%);
+}
+.text {
+    background-color: white;
+    text-align: center;
+    margin-top: -3px;
+    padding-top: 80px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+h2 {
+    color: hsl(229, 23%, 23%);
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+}
+h2::after {
+    content: "26";
+    color: hsl(227, 10%, 46%);
+    margin-left: 7px;
+    font-size: 18px;
+    font-weight: 400;
+}
+h2::before {
+    content: "London";
+    position: absolute;
+    color: hsl(227, 10%, 46%);
+    left: 50%;
+    bottom: -30px;
+    font-size: 16px;
+    font-weight: normal;
+    transform: translatex(-50%);
+}
+hr {
+    margin-top: 50px;
+}
+.numbers {
+    padding-top: 15px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.numbers span {
+    color: hsl(229, 23%, 23%);
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+}
+.numbers span::before {
+    content: attr(data-self);
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: -16px;
+    letter-spacing: 3px;
+    font-weight: normal;
+    font-size: 10px;
+    color: hsl(227, 10%, 46%);
+}
+.top,
+.bottom {
+    max-width: 100%;
+    max-height: 75vh;
+    overflow: hidden;
+}
+.ball {
+    position: absolute;
+}
+.ball.top {
+    top: -192px;
+    left: -175px;
+}
+.top img:last-of-type {
+    display: none;
+}
+.bottom img:first-of-type {
+    bottom: 0;
+    right: 0;
+}
+.bottom img:last-of-type {
+    display: none;
+}
